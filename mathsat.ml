@@ -306,7 +306,7 @@ let msat_term_equal s t = (msat_term_id s) = (msat_term_id t)
 
 (** Compare two term.  Requires that both terms belong to the same
     environment. *)
-let msat_term_compare s t = Pervasives.compare (msat_term_id s) (msat_term_id t)
+let msat_term_compare s t = Stdlib.compare (msat_term_id s) (msat_term_id t)
 
 (** {2 Term parsing/printing} *)
 

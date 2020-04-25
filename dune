@@ -1,0 +1,15 @@
+(library
+  (public_name mathsat)
+  (modules (:standard \ test))
+  (name mathsat)
+  (libraries gmp)
+  (foreign_stubs
+   (language c)
+   (names libmathsat_stubs))
+  (c_library_flags (-lmathsat) (-lgmpxx) (-lgmp) (-lstdc++)))
+
+(test
+ (name test)
+ (modules test)
+ (modes native)
+ (libraries mathsat oUnit))
