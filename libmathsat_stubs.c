@@ -69,7 +69,7 @@ void _make_model(value* vptr, msat_model x) {
 #define FUN_ARG_int(x, v) \
   int x = Int_val(v);
 #define FUN_ARG_string(x, v) \
-  char *x = String_val(v)
+  const char *x = String_val(v)
 
 #define FUN_RET_int(eval) \
   CAMLreturn(Val_int(eval));
